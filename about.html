@@ -5,62 +5,139 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-    <title>JASA ANTAR JEMPUT</title>
+    <title>ABOUT</title>
+
+
+    <style>
+      body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #0080ff; /* Warna latar belakang */
+      color: #ffffff; /* Warna teks */
+      background-image: linear-gradient(227deg, rgba(11, 95, 67,0.5) 0%, rgba(11, 95, 67,0.5) 5%,transparent 5%, transparent 38%,transparent 38%, transparent 60%,rgba(7, 115, 73,0.5) 60%, rgba(7, 115, 73,0.5) 100%),linear-gradient(317deg, rgb(4, 136, 80) 0%, rgb(4, 136, 80) 14%,rgb(0, 156, 86) 14%, rgb(0, 156, 86) 75%,rgb(7, 115, 73) 75%, rgb(7, 115, 73) 100%),linear-gradient(272deg, rgb(255,255,255),rgb(255,255,255));
+     }
+      .container {
+        max-width: 800px;
+        margin: auto;
+        padding: 20px;
+        text-align: center;
+      }
+    h1 {
+      font-size: 2.5em; /* Ukuran font untuk judul */
+      color: #ffffff; /* Warna teks untuk judul */
+      text-shadow: 2px 2px 4px rgba(255, 255, 255, 0.2); /* Efek bayangan teks */
+    }
+    p {
+      font-size: 1.2em; /* Ukuran font untuk teks biasa */
+      line-height: 1.6; /* Spasi baris */
+      margin-top: 20px; /* Jarak atas antara paragraf */
+    }
+    .thank-you {
+      color: #000000;
+      position: relative; /* Membuat posisi relatif untuk konten */
+
+      margin-top: 50px; /* Jarak atas dari paragraf terakhir */
+    }
+    .border-animation {
+      position: absolute; /* Membuat posisi absolut untuk border */
+      width: calc(100% + 4px); /* Lebar sesuai dengan konten */
+      height: calc(100% + 4px); /* Tinggi sesuai dengan konten */
+      top: -2px; /* Menempatkan border di atas konten */
+      left: -2px; /* Menempatkan border di kiri konten */
+      border: 2px solid #000000; /* Border solid dengan warna penuh */
+      border-radius: 10px; /* Membuat border dengan sudut melengkung */
+    }
+    @keyframes animateBorder {
+     from {
+        border-color: #007bff; /* Warna border awal */
+      }
+     to {
+        border-color: #28a745; /* Warna border akhir */
+      }
+  
+    }
+    footer {
+      background-color: #28a745; /* Green background for footer */
+      color: #ffffff; 
+      padding: 30px 0; 
+      margin-top: 20px;
+    }
+
+    footer a {
+      color: #ffffff; 
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    footer a:hover {
+      color: #000000; /* Lighter green on hover */
+    }
+    </style>
 </head>
 
 <body>
 <!-- bagian navbar -->
-<nav class="navbar navbar-expand-lg navbar-dark bg-info text-dark sticky-top" >
-    <div class="container-fluid">
-      <a class="navbar-brand" href="index.html">ANJEM</a>
+<nav class="navbar navbar-expand-lg navbar-dark bg-success text-light sticky-top">
+  <div class="container-fluid">
+      <a class="navbar-brand" href="">SOBAT JALAN</a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
+          <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
-        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-          <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="index.html">beranda</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="about.html">about</a>
-          </li>
-          <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-              menu
-            </a>
-            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-              <li><a class="dropdown-item" href="driverlist.html">daftar driver</a></li>
-              <li><a class="dropdown-item" href="login.html">login</a></li>
-              <li><hr class="dropdown-divider"></li>
-            </ul>
-          </li>
-        </ul>
-        <form class="d-flex">
-          <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-          <button class="btn btn-outline-light" type="submit">Search</button>
-        </form>
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                  <a class="nav-link active" aria-current="page" href="beranda.html">Beranda</a>
+              </li>
+              <li class="nav-item">
+                  <a class="nav-link" href="about.html">About</a>
+              </li>
+              <li class="nav-item dropdown">
+                  <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                      Menu
+                  </a>
+                  <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                      <li><a class="dropdown-item" href="driverlist.html">Daftar Driver</a></li>
+                      <li><a class="dropdown-item" href="index.html">Login</a></li>
+                      <li><hr class="dropdown-divider"></li>
+                  </ul>
+              </li>
+          </ul>
+          <form class="d-flex">
+              <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+              <button class="btn btn-outline-light" type="submit">Search</button>
+          </form>
       </div>
-    </div>
-  </nav>
+  </div>
+</nav>
 <!-- end navbar -->
 
+<div class="container">
+  <h1>Sobat Jalan: Ojek Online dengan Layanan Profesional</h1>
+  <p>Sobat Jalan adalah platform ojek online yang menyediakan layanan antar jemput dengan driver yang profesional dan berpengalaman. Kami berkomitmen untuk memberikan pengalaman perjalanan yang aman, nyaman, dan terpercaya bagi setiap pelanggan.</p>
+  <p>Dengan armada kendaraan yang terawat dan driver yang terlatih, kami siap mengantar Anda ke tujuan dengan cepat dan efisien. Tersedia berbagai pilihan layanan yang dapat disesuaikan dengan kebutuhan perjalanan Anda.</p>
+  <p>Kami ingin mengucapkan terima kasih atas dukungan dan kepercayaan Anda. Bersama Sobat Jalan, mari kita menjadikan perjalanan Anda lebih menyenangkan dan bebas stres!</p>
+  <div class="thank-you">
+    <p>Terima kasih atas kunjungan Anda!</p>
+    <div class="border-animation"></div> <!-- Border untuk animasi -->
+  </div>
+</div>
 
-
-    <footer style="background-color: #1a1a1a; color: #ffffff; padding: 30px 0; margin-top: 20px;">
-        <div style="text-align: center;">
-            <p style="font-size: 18px; font-weight: bold;">Sobat Jalan: Layanan Antar Jemput Terpercaya</p>
-            <p style="font-size: 16px;">Hubungi Kami: <a href="tel:0800-123-456" style="color: #ffffff; text-decoration: none; font-weight: bold;">0800-123-456</a> | Email: <a href="mailto:info@sobatjalan.com" style="color: #ffffff; text-decoration: none; font-weight: bold;">info@sobatjalan.com</a></p>
-            <p style="font-size: 16px;">Ikuti Kami di Media Sosial:</p>
-            <div style="margin-top: 10px;">
-                <a href="#" style="color: #ffffff; text-decoration: none; margin-right: 10px;" onmouseover="this.style.color='#4CAF50'" onmouseout="this.style.color='#ffffff'">Facebook</a>
-                <a href="#" style="color: #ffffff; text-decoration: none; margin-right: 10px;" onmouseover="this.style.color='#4CAF50'" onmouseout="this.style.color='#ffffff'">Instagram</a>
-                <a href="#" style="color: #ffffff; text-decoration: none;" onmouseover="this.style.color='#4CAF50'" onmouseout="this.style.color='#ffffff'">Twitter</a>
-            </div>
+  <footer>
+    <div style="text-align: center;">
+        <p style="font-size: 18px; font-weight: bold;">Sobat Jalan: Layanan Antar Jemput Terpercaya</p>
+        <p style="font-size: 16px;">Hubungi Kami: <a href="tel:0800-123-456">0800-123-456</a> | Email: <a href="mailto:info@sobatjalan.com">info@sobatjalan.com</a></p>
+        <p style="font-size: 16px;">Ikuti Kami di Media Sosial:</p>
+        <div style="margin-top: 10px;">
+            <a href="#" style="margin-right: 10px;">Facebook</a>
+            <a href="#" style="margin-right: 10px;">Instagram</a>
+            <a href="#">Twitter</a>
         </div>
-        <div style="text-align: center; margin-top: 20px;">
-            <p style="font-size: 14px;">&copy; 2024 Sobat Jalan. All Rights Reserved.</p>
-        </div>
-      </footer>
+    </div>
+    <div style="text-align: center; margin-top: 20px;">
+        <p style="font-size: 14px;">&copy; 2024 Sobat Jalan. All Rights Reserved.</p>
+    </div>
+  </footer>
 
 
 
