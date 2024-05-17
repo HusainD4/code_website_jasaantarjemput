@@ -15,6 +15,17 @@
             font-weight: bold;
         }
 
+        body.fade-out {
+            animation: slideUp 1s forwards;
+        }
+
+        @keyframes slideUp {
+            to {
+                transform: translateY(-100%);
+                opacity: 0;
+            }
+        }
+
         .fun-text {
             color: #808080; /* Warna abu-abu */
             font-family: 'Comic Sans MS', cursive; /* Gaya font lucu */
@@ -43,9 +54,10 @@
         .login-btn-container {
             margin-top: 20px;
         }
+
+        
     </style>
 </head>
-
 
 <body class="bg-light">
     <div style="color: #4EE2EC;">
@@ -57,21 +69,27 @@
         </div>
         <div class="col-7 text-left">
             <h1 class="highlight-text">BEPERGIAN TANPA HARUS PUNYA KENDARAAN</h1>
-            <h2 class="fun-text">Bingung bepergian gakpunya kendaraan? butuh jasa antar jemput?</h2>
+            <h2 class="fun-text">Bingung bepergian gak punya kendaraan? Butuh jasa antar jemput?</h2>
             <h2 class="fun-text">Nikmati kemudahan antar jemput bersama <span style="color: blue;">sobat jalan.</span></h2>
             <h2 class="fun-text">Booking sekarang!</h2>
             <div class="login-btn-container"> <!-- Tambahkan div untuk membuat ruang atas -->
-                <a href="login.html" class="login-btn">Login</a> <!-- Ganti input menjadi tautan -->
+                <a href="login.html" class="login-btn" id="loginBtn">Login</a> <!-- Ganti input menjadi tautan -->
             </div>
         </div>
     </div>
 </div>
 
-
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
 integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
 crossorigin="anonymous"></script>
+<script>
+    document.getElementById('loginBtn').addEventListener('click', function(event) {
+        event.preventDefault();
+        document.body.classList.add('fade-out');
+        setTimeout(function() {
+            window.location.href = 'login.html';
+        }, 1000); // Durasi animasi sesuai dengan CSS
+    });
+</script>
 </body>
-
-
 </html>

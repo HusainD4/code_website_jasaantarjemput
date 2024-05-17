@@ -77,8 +77,8 @@
         transform: translateY(-10px);
       }
       .row.text-dark {
-    display: flex;
-    align-items: stretch; /* Menjadikan setiap item pada baris memiliki tinggi yang sama */
+       display: flex;
+       align-items: stretch; /* Menjadikan setiap item pada baris memiliki tinggi yang sama */
      }
     .card {
       height: 100%; /* Setiap kartu memiliki tinggi yang sama */
@@ -102,6 +102,15 @@
     .btn {
      margin-top: auto; /* Mengatur tombol agar berada di bagian bawah kartu */
     }
+
+    @keyframes button-hover {
+              from {
+                  background-color: #2e7d32;
+              }
+              to {
+                  background-color: #43d14a;
+              }
+          }
 
       
   </style>

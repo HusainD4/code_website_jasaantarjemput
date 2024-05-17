@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Server Warning</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #f8d7da;
+        }
+
+        .alert {
+            padding: 20px;
+            background-color: #f44336; /* Red */
+            color: white;
+            opacity: 0;
+            transition: opacity 0.5s ease-out;
+            border-radius: 5px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .alert.show {
+            opacity: 1;
+        }
+
+        .alert .icon {
+            margin-bottom: 15px;
+        }
+
+        @keyframes fadeOut {
+            from { opacity: 1; }
+            to { opacity: 0; }
+        }
+
+        @keyframes slideUp {
+            from { transform: translateY(0); }
+            to { transform: translateY(-100vh); }
+        }
+
+        .fade-out {
+            animation: fadeOut 0.5s forwards;
+        }
+
+        .slide-up {
+            animation: slideUp 0.5s forwards;
+        }
+
+        .countdown {
+            margin-top: 10px;
+            font-size: 1.2em;
+        }
+    </style>
+</head>
+<body>
+    <div id="alertBox" class="alert">
+        <span class="icon">&#9888;</span> <!-- Unicode for warning sign -->
+        <div>Maaf, server saat ini tidak dilengkapi dengan base SQL.</div>
+        <div id="countdown" class="countdown">Mengalihkan dalam 5 detik...</div>
+    </div>
+
+    <script>
+        // Function to show alert with fade effect and countdown timer
+        function showAlert() {
+            const alertBox = document.getElementById('alertBox');
+            const countdownElement = document.getElementById('countdown');
+            let countdown = 5;
+
+            // Show alert
+            alertBox.classList.add('show');
+
+            // Start countdown
+            const countdownInterval = setInterval(() => {
+                countdown -= 1;
+                countdownElement.textContent = `Mengalihkan dalam ${countdown} detik...`;
+
+                if (countdown <= 0) {
+                    clearInterval(countdownInterval);
+                    alertBox.classList.add('fade-out');
+                    setTimeout(() => {
+                        alertBox.classList.add('slide-up');
+                        setTimeout(() => {
+                            window.location.href = 'login.html';
+                        }, 500);
+                    }, 500);
+                }
+            }, 1000);
+        }
+
+        // Call the function to show the alert on page load
+        window.onload = showAlert;
+    </script>
+</body>
+</html>
