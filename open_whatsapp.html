@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kirim Pesan WhatsApp</title>
+</head>
+<body>
+    <h1>Kirim Pesan ke WhatsApp</h1>
+    <form id="whatsappForm">
+        <label for="phone">Nomor Telepon (dengan kode negara, tanpa tanda plus):</label><br>
+        <input type="text" id="phone" name="phone" placeholder="6281234567890" required><br><br>
+        
+        <label for="message">Pesan:</label><br>
+        <textarea id="message" name="message" placeholder="Tulis pesan Anda di sini..." required></textarea><br><br>
+        
+        <button type="submit">Kirim Pesan via WhatsApp</button>
+    </form>
+
+    <script>
+        document.getElementById('whatsappForm').addEventListener('submit', function(event) {
+            event.preventDefault();
+            
+            var phone = document.getElementById('phone').value;
+            var message = encodeURIComponent(document.getElementById('message').value);
+            var url = "https://wa.me/qr/FJQHCUCOJZDTP1";
+            
+            window.open(url, '_blank');
+        });
+    </script>
+</body>
+</html>
+
+
+
+
+
+
+<!-- 
+https://wa.me/${phone}?text=${message} -->
