@@ -505,14 +505,23 @@
           });
   
           document.getElementById('loginForm').addEventListener('submit', function(event) {
-              event.preventDefault();
-              document.body.classList.remove('fade-in');
-              document.body.classList.add('fade-out');
-              setTimeout(function() {
-                  window.location.href = 'beranda.html';
-              }, 1000); // Match this with the CSS transition duration
+                event.preventDefault();
+                const username = document.getElementById('username').value;
+                const password = document.getElementById('password').value;
+                const errorDiv = document.getElementById('error');
+
+                if (username === 'admin' && password === 'admin123') {
+                    document.body.classList.remove('fade-in');
+                    document.body.classList.add('fade-out');
+                    setTimeout(function() {
+                    window.location.href = 'beranda.html';  }, 1000); // Match this with the CSS transition duration
+                } else {
+                errorDiv.textContent = 'Username atau password salah';
+                }
+                
           });
-      </script>
+
+    </script>
   </body>
   </html>
   
