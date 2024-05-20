@@ -514,7 +514,7 @@
                 const storedUsername = localStorage.getItem('username');
                 const storedPassword = localStorage.getItem('password');
 
-                if (username === 'admin' && password === 'admin123') {
+                if (username === storedUsername && password === storedPassword) {
                     document.body.classList.remove('fade-in');
                     document.body.classList.add('fade-out');
                     setTimeout(function() {
@@ -530,4 +530,12 @@
   </html>
   
 
-  
+<!--   
+  if (username === 'admin' && password === 'admin123') {
+    document.body.classList.remove('fade-in');
+    document.body.classList.add('fade-out');
+    setTimeout(function() {
+    window.location.href = 'beranda.html';  }, 1000); // Match this with the CSS transition duration
+} else {
+errorDiv.textContent = 'Username atau password salah';
+} -->
